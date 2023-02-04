@@ -7,8 +7,9 @@ export const InputArea = styled.div<types.InputAreaProps>`
   padding-right: 10px;
   padding-left: 10px;
   background-color: ${(props) => (props.bgColor ? props.bgColor : "white")};
-  flex-direction: row;
+  flex-flow: row wrap;
   padding: 10px;
+  height: ${(props) => (props.multi ? "100px" : "")};
   align-items: center;
   margin-bottom: ${(props) => (props.mb ? props.mb : 0)}px;
   border: 1px solid
@@ -17,11 +18,13 @@ export const InputArea = styled.div<types.InputAreaProps>`
   line-height: 24px;
   text-align: left;
 `;
-export const Input = styled.input<types.InputProps>`
+
+export const Input = styled.input<types.InputProps2>`
   flex: 1;
-  font-family: "Nunito";
   font-style: normal;
   font-weight: 500;
+  resize: none;
+  overflow: hidden;
   &::placeholder {
     color: ${(props) =>
       props.placeholderColor ? props.placeholderColor : Colors.gray};
@@ -34,7 +37,32 @@ export const Input = styled.input<types.InputProps>`
   border: none;
   background: none;
   width: 98%;
-  height: 98%;
+  word-break: break-all;
+  min-height: 48%;
+  &:focus {
+    outline: none;
+  }
+`;
+export const Input2 = styled.textarea<types.InputProps2>`
+  flex: 1;
+  font-style: normal;
+  font-weight: 500;
+  resize: none;
+  overflow: hidden;
+  &::placeholder {
+    color: ${(props) =>
+      props.placeholderColor ? props.placeholderColor : Colors.gray};
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 16px;
+  }
+  font-size: 16px;
+  color: ${(props) => (props.textColor ? props.textColor : "#000")};
+  border: none;
+  background: none;
+  width: 98%;
+  word-break: break-all;
+  min-height: 48%;
   &:focus {
     outline: none;
   }

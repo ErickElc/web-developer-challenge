@@ -14,7 +14,7 @@ export const Container = styled.header`
 export const TitleHeader = styled.h1`
   color: ${Colors.green};
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   margin: 0px;
 `;
 

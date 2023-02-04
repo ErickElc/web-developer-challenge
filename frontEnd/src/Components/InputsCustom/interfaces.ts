@@ -1,9 +1,11 @@
 export interface InputProps {
-  IconSvg?: React.FC<React.SVGProps<SVGSVGElement>>;
-  IconSvg2?: React.FC<React.SVGProps<SVGSVGElement>>;
-  placeholder: string;
-  value: string;
-  onChangeText: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string | undefined;
+  value?: string | (readonly string[] & string);
+  onChangeText?: (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void;
   password?: boolean;
   onPress?: () => void;
   mb?: number;
@@ -14,15 +16,20 @@ export interface InputProps {
   borderColor?: string;
   textColor?: string;
   placeholderColor?: string;
+  multi?: boolean;
 }
 export interface InputAreaProps {
+  multi?: boolean;
   wd?: string | number;
   bgColor?: string;
   mb?: number;
   borderColor?: string;
 }
 
-export interface InputProps {
+export interface InputProps2 {
+  wd?: string | number;
+  multi?: boolean;
+  editable?: boolean;
   placeholderColor?: string;
   textColor?: string;
 }

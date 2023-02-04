@@ -10,7 +10,7 @@ import Main from "../../Components/Layout/Main";
 export default () => {
   return (
     <S.Container>
-      <Header titleHeader={"buildbox"} subTitleHeader={"WEB CHALLENGE"} />
+      <Header titleHeader={"Buildbox"} subTitleHeader={"WEB CHALLENGE"} />
       <Main />
     </S.Container>
   );

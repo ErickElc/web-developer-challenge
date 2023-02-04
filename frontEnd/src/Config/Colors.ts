@@ -4,4 +4,5 @@ export const Colors = {
   tertiary: "#313131",
   green: "#71bb00",
   gray: "#707070",
+  inputColor: "#494949",
 };
